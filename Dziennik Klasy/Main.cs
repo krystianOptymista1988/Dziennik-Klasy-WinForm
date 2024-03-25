@@ -60,17 +60,43 @@ namespace Dziennik_Klasy
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (dgvStudentsDiary.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Zaznacz ucznia którego dane chcesz edytować");
+                return;
+            }
+
+            var addEditStudent = new AddEditStudent(Convert.ToInt32(dgvStudentsDiary.SelectedRows[0].Cells[0].Value));
+            addEditStudent.ShowDialog();
 
         }
 
         private void tbnDelete_Click(object sender, EventArgs e)
         {
 
+            if (dgvStudentsDiary.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Zaznacz ucznia którego dane chcesz usunąć");
+                return;
+            }
+
+            var selectedSudent = dgvStudentsDiary.SelectedRows[0];
+            var confirmDelete = MessageBox.Show($@"czy napewno chcesz usunąć ucznia: {(selectedSudent.Cells[1].Value.ToString() + " " +  selectedSudent.Cells[2].Value.ToString()).Trim()}","Usuwanie ucznia", MessageBoxButtons.OKCancel);
+
+            if (confirmDelete == DialogResult.OK)
+            {
+                var students = DeserializeFromFile();
+                students.RemoveAll(x => x.Id == Convert.ToInt32(selectedSudent.Cells[0].Value));
+                SerializeToFile(students);
+                dgvStudentsDiary.DataSource = students;
+            }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            var students = DeserializeFromFile();
 
+            dgvStudentsDiary.DataSource = students;
         }
     }
 }
