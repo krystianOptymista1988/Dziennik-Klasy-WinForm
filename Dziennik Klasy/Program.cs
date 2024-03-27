@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -8,6 +9,7 @@ namespace Dziennik_Klasy
 {
     internal static class Program
     {
+        public static string FilePath = Path.Combine(Environment.CurrentDirectory, "students.txt");
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
         /// </summary>

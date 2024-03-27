@@ -87,13 +87,16 @@
             this.dgvStudentsDiary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvStudentsDiary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStudentsDiary.BackgroundColor = System.Drawing.Color.White;
             this.dgvStudentsDiary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudentsDiary.Location = new System.Drawing.Point(105, 125);
             this.dgvStudentsDiary.Name = "dgvStudentsDiary";
+            this.dgvStudentsDiary.RowHeadersVisible = false;
             this.dgvStudentsDiary.RowHeadersWidth = 62;
             this.dgvStudentsDiary.RowTemplate.Height = 28;
-            this.dgvStudentsDiary.Size = new System.Drawing.Size(850, 565);
+            this.dgvStudentsDiary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStudentsDiary.Size = new System.Drawing.Size(1147, 687);
             this.dgvStudentsDiary.TabIndex = 4;
             // 
             // Main
@@ -101,7 +104,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1066, 779);
+            this.ClientSize = new System.Drawing.Size(1363, 901);
             this.Controls.Add(this.dgvStudentsDiary);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.tbnDelete);

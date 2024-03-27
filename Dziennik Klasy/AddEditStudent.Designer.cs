@@ -202,9 +202,9 @@
             // 
             // rtbComments
             // 
-            this.rtbComments.Location = new System.Drawing.Point(126, 409);
+            this.rtbComments.Location = new System.Drawing.Point(126, 392);
             this.rtbComments.Name = "rtbComments";
-            this.rtbComments.Size = new System.Drawing.Size(212, 192);
+            this.rtbComments.Size = new System.Drawing.Size(212, 182);
             this.rtbComments.TabIndex = 18;
             this.rtbComments.Text = "";
             // 
@@ -220,7 +220,7 @@
             // btnConfirm
             // 
             this.btnConfirm.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnConfirm.Location = new System.Drawing.Point(445, 557);
+            this.btnConfirm.Location = new System.Drawing.Point(31, 598);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(128, 34);
             this.btnConfirm.TabIndex = 20;
@@ -231,7 +231,7 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.DarkRed;
-            this.btnCancel.Location = new System.Drawing.Point(609, 557);
+            this.btnCancel.Location = new System.Drawing.Point(187, 598);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(128, 34);
             this.btnCancel.TabIndex = 21;
@@ -243,7 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 649);
+            this.ClientSize = new System.Drawing.Size(273, 429);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.label10);
@@ -267,8 +267,12 @@
             this.Controls.Add(this.lbId);
             this.Controls.Add(this.tbID);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(432, 700);
+            this.MinimumSize = new System.Drawing.Size(432, 700);
             this.Name = "AddEditStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj lub edytuj ucznia";
+            this.Load += new System.EventHandler(this.AddEditStudent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
