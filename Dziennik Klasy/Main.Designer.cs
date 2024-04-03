@@ -34,6 +34,7 @@
             this.tbnDelete = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvStudentsDiary = new System.Windows.Forms.DataGridView();
+            this.cbGroup = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentsDiary)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,12 +100,24 @@
             this.dgvStudentsDiary.Size = new System.Drawing.Size(1147, 687);
             this.dgvStudentsDiary.TabIndex = 4;
             // 
+            // cbGroup
+            // 
+            this.cbGroup.FormattingEnabled = true;
+            this.cbGroup.Location = new System.Drawing.Point(807, 48);
+            this.cbGroup.Name = "cbGroup";
+            this.cbGroup.Size = new System.Drawing.Size(220, 28);
+            this.cbGroup.TabIndex = 5;
+            this.cbGroup.Text = "wybierz";
+            
+            this.cbGroup.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1363, 901);
+            this.Controls.Add(this.cbGroup);
             this.Controls.Add(this.dgvStudentsDiary);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.tbnDelete);
@@ -113,6 +126,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Text = "     Dziennik Klasy";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentsDiary)).EndInit();
             this.ResumeLayout(false);
 
@@ -125,6 +139,7 @@
         private System.Windows.Forms.Button tbnDelete;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dgvStudentsDiary;
+        private System.Windows.Forms.ComboBox cbGroup;
     }
 }
 

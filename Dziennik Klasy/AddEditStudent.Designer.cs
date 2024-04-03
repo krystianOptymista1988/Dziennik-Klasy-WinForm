@@ -51,6 +51,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.chbActivities = new System.Windows.Forms.CheckBox();
+            this.lbGroupID = new System.Windows.Forms.Label();
+            this.tbGroupId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // tbID
@@ -202,7 +205,7 @@
             // 
             // rtbComments
             // 
-            this.rtbComments.Location = new System.Drawing.Point(126, 392);
+            this.rtbComments.Location = new System.Drawing.Point(440, 184);
             this.rtbComments.Name = "rtbComments";
             this.rtbComments.Size = new System.Drawing.Size(212, 182);
             this.rtbComments.TabIndex = 18;
@@ -211,7 +214,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 409);
+            this.label10.Location = new System.Drawing.Point(536, 143);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 20);
             this.label10.TabIndex = 19;
@@ -239,11 +242,41 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // chbActivities
+            // 
+            this.chbActivities.AccessibleRole = System.Windows.Forms.AccessibleRole.HelpBalloon;
+            this.chbActivities.AutoSize = true;
+            this.chbActivities.Location = new System.Drawing.Point(126, 387);
+            this.chbActivities.Name = "chbActivities";
+            this.chbActivities.Size = new System.Drawing.Size(168, 24);
+            this.chbActivities.TabIndex = 22;
+            this.chbActivities.Text = "Zajęcia dodatkowe";
+            this.chbActivities.UseVisualStyleBackColor = true;
+            // 
+            // lbGroupID
+            // 
+            this.lbGroupID.AutoSize = true;
+            this.lbGroupID.Location = new System.Drawing.Point(18, 433);
+            this.lbGroupID.Name = "lbGroupID";
+            this.lbGroupID.Size = new System.Drawing.Size(73, 20);
+            this.lbGroupID.TabIndex = 23;
+            this.lbGroupID.Text = "ID Grupy";
+            // 
+            // tbGroupId
+            // 
+            this.tbGroupId.Location = new System.Drawing.Point(126, 430);
+            this.tbGroupId.Name = "tbGroupId";
+            this.tbGroupId.Size = new System.Drawing.Size(212, 26);
+            this.tbGroupId.TabIndex = 24;
+            // 
             // AddEditStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 429);
+            this.ClientSize = new System.Drawing.Size(779, 761);
+            this.Controls.Add(this.tbGroupId);
+            this.Controls.Add(this.lbGroupID);
+            this.Controls.Add(this.chbActivities);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.label10);
@@ -267,8 +300,7 @@
             this.Controls.Add(this.lbId);
             this.Controls.Add(this.tbID);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(432, 700);
-            this.MinimumSize = new System.Drawing.Size(432, 700);
+            this.MinimumSize = new System.Drawing.Size(781, 700);
             this.Name = "AddEditStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj lub edytuj ucznia";
@@ -302,5 +334,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.CheckBox chbActivities;
+        private System.Windows.Forms.Label lbGroupID;
+        private System.Windows.Forms.TextBox tbGroupId;
     }
 }
